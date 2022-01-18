@@ -1,0 +1,21 @@
+.wrapper{
+    background-color: cadetblue;
+    height: 100%;
+    padding-left:10px;
+    
+}
+.sidebar li{
+    display: flex;
+    color: black;
+}
+.sidebar span{
+    padding: 10px;
+
+}
+.sidebar .icon{
+    transform: scale(1.8);
+}
+.sidebar li:hover{
+    color:white;
+    transition: 0.5s;
+}

@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import "./App.css";
 
-function App() {
+import Home from "./Home";
+import Login from "./Login";
+import NotFound from "./NotFound";
+import store from './Redux/store';
+
+import {userLogged} from './Redux/actions'
+store.dispatch(userLogged("user added"))
+console.log("store", store.getState());
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="navbar">
+        <div className="Logo"> <h5> LOGO </h5></div>
+        <div className="links">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
+        </div>
+      </div>
+
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

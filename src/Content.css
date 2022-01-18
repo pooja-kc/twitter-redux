@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* ::selection {
+    color: #fff;
+    background: #1da1f2;
+  } */
+
+  .wrapperr {
+    background: #fff;
+    width: 100%;
+    border-radius: 15px;
+    padding: 15px 15px 15px 25px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .input-box {
+    padding-top: 10px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .input-box .tweet-area {
+    position: relative;
+    min-height: 10px;
+    max-height: 170px;
+    overflow-y: auto;
+  }
+  .tweet-area::-webkit-scrollbar {
+    width: 0px;
+  }
+  .tweet-area ::placeholder {
+    margin-top: -3px;
+    font-size: 22px;
+    color: #98A5B1;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  textarea {
+    outline: none;
+    border: none;
+    font-size: 17px;
+    height: 80px;
+    width: 600px;
+    overflow: auto;
+    min-height: 60px;
+    word-wrap: break-word;
+  }
+  .tweet-area .editable {
+    position: relative;
+    z-index: 5;
+    padding-top: 20px;
+  }
+  .tweet-area .readonly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: transparent;
+    background: transparent;
+  }
+  .readonly .highlight {
+    background: #fd9bb0;
+  }
+  .input-box .privacy {
+    color: #1da1f2;
+    margin: 15px 0;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .privacy:hover,
+  .icons li:hover {
+    background: #e7f5fe;
+  }
+  .privacy i {
+    font-size: 18px;
+  }
+  .privacy span {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 7px;
+  }
+  .bottom {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bottom .icons {
+    display: inline-flex;
+  }
+  .icons li {
+    list-style: none;
+    color: #1da1f2;
+    font-size: 20px;
+    margin: 0 2px;
+    height: 38px;
+    width: 38px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+  }
+  .bottom .content_ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .myButton {
+    background-color: #1da1f2;
+    border-radius: 15px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 10px 10px 10px;
+    text-decoration: none;
+    max-height: 40px;
+    max-width: 100px;
+  }
+  .myButton:hover {
+    background-color: #117abb;
+  }
+  .myButton:active {
+    position: relative;
+    top: 1px;
+  }
+  @media (min-device-width: 320px) and (max-device-width: 480px) {
+    .icons,
+    .myButton {
+      transform: scale(0.7);
+      margin: 0px;
+    }
+    .icons li {
+      width: 80%;
+      margin-left: 10px;
+    }
+  }
+  .card-user img {
+    width: 50px;
+    height: 50px;
+    position: center;
+    border-radius: 100px;
+    margin: 10px 10px 0px 10px;
+  }
+  .card-tweet p {
+    color: black;
+    font-size: 10px;
+  }
+  .card {
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  .card-user {
+    display: flex;
+    text-align: center;
+  }
+  .card-user h3 {
+    padding-top: 15px;
+  }

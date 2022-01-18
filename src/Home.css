@@ -1,0 +1,17 @@
+.Home__Wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar{
+    width: 10%;
+    padding-top:20px;
+    background-color: cadetblue;
+}
+.content{
+ width: 60%;
+ padding: 20px;
+}
+.trending{
+    width:30%;
+    padding: 20px;
+}

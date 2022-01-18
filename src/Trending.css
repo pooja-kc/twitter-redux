@@ -1,0 +1,22 @@
+.trending-content img {
+    width: 200px;
+    height: 200px;
+    float: right;
+    display: inline-block;
+  }
+  p {
+    color: #00303F;
+    display: inline;
+    text-align: left;
+  } */
+   .trending-content {
+    overflow: hidden;
+  }
+  .image2 {
+    width: 100px;
+    height: 100px;
+   
+    display: inline-block;
+    border-radius: 100px;
+  }
+  
