@@ -18,12 +18,7 @@
     left: 0;
     width: 80%;
   }
-  /* .email-input,
-  .password-input {
-    margin-left: 10%;
-    margin-top: 10px;
-    text-align: left;
-  } */
+  
   label {
     float: left;
     clear: left;
@@ -55,7 +50,7 @@
     margin: 20px 20px 20px 0px;
   }
   .login-button {
-    margin-left: 0;
+    margin-left: 20px;
   }
   #Login_Button:disabled {
     opacity: 0.4;
@@ -64,9 +59,26 @@
   input:focus {
     outline: solid 3px #CAE4DB;
   }
-  form p {
+  .login p{
     background-color: #D5BFBF;
     height: 30px;
     color: black;
     padding: 10px;
+    margin-left:20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  
+  }
+  .login h1{
+padding-top: 20px;
+  }
+
+  .button_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logOrSign p:hover{
+    color: #D5BFBF;
+    background-color: transparent;
   }

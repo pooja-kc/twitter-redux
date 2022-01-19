@@ -1,35 +1,64 @@
-import React from "react";
+import React, {  useState } from "react";
 import "./Content.css";
-import { FaFileImage, FaMapMarkerAlt,FaSmile , FaTag} from "react-icons/fa";
+import { FaFileImage, FaMapMarkerAlt, FaSmile, FaTag } from "react-icons/fa";
+import store from "./Redux/store";
+import { FaTrash } from "react-icons/fa";
+
+import { addTweet, removeTweet } from "./Redux/actions";
+store.dispatch(addTweet({
+  "userName": "Bibby Siderfin",
+  "tweet": "Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+  "date": "10/16/2021"
+}));
+store.dispatch(addTweet({
+  "userName": "Bibby Siderfin",
+  "tweet": "Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+  "date": "10/16/2021"
+}));
 
 export default function Content() {
+
+  const [tweet, setnewtweet] = useState("");
+  const [tweets, setTweets] =useState([...store.getState().reducer2]);
+  
+function addTweet_(){
+
+  (tweet.trim()) && store.dispatch(addTweet({
+    "userName": "Bibby Siderfin",
+    "tweet": tweet ,
+    "date": "10/16/2021"
+  }));
+  setTweets([...store.getState().reducer2]);
+}
+
+function deleteTweet(id){
+  store.dispatch(removeTweet({id}));
+  setTweets([...store.getState().reducer2]);
+}
+
+
   return (
     <div>
-      <div class="container">
-        <div class="wrapperr">
-          <div class="input-box">
-            <div class="tweet-area">
+      <div className="container">
+        <div className="wrapperr">
+          <div className="input-box">
+            <div className="tweet-area">
               <textarea
-                maxlength="500"
+                maxLength="500"
                 type="text"
-                v-model="tweetText"
+                onChange={(e) => setnewtweet(e.target.value)}
                 placeholder="What's happening?"
-                class="input editable input"
-                spellcheck="false"
+                className="input editable input"
+                spellCheck="false"
               />
-              <div
-                class="input readonly"
-                contenteditable="true"
-                spellcheck="false"
-              ></div>
             </div>
-            <div class="privacy">
-              <i class="fas fa-globe-asia"></i>
+            <div className="privacy">
+              <i className="fas fa-globe-asia"></i>
               <span>Everyone can reply</span>
             </div>
           </div>
-          <div class="bottom">
-            <ul class="icons">
+          <div className="bottom">
+            <ul className="icons">
               <li>
                 <FaFileImage />
               </li>
@@ -43,25 +72,32 @@ export default function Content() {
                 <FaTag />
               </li>
             </ul>
-            <a href="#" class="myButton">
+            <a className="myButton" onClick={addTweet_}>
               Tweet
             </a>
           </div>
         </div>
-        <div class="tweets-list">
+        <div className="tweets-list">
           <ul>
-            <li v-for="product in posts">
-              <div class="card">
-                <div class="card-user">
-                  <img
-                    src="https://th.bing.com/th/id/OIP.0oAaZ9FyGxTXXYSBSlXziQHaHa?w=161&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
-                    alt=""
-                  />
-                  <h3 class="user-name"></h3>
-                </div>
-                <div class="card-tweet"></div>
+         {   
+          tweets.map((ele)=> <li key={ele.tweet.id}>
+            <div className="card">
+              <div className="card-user">
+                <img
+                  src="https://th.bing.com/th/id/OIP.0oAaZ9FyGxTXXYSBSlXziQHaHa?w=161&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                  alt=""
+                />
+               
+                <h3 className="user-name">{ele.tweet.userName}</h3>
               </div>
-            </li>
+              <div className="card-tweet">{ele.tweet.tweet}</div>
+              <div className="delete-icon" onClick={()=>deleteTweet(ele.tweet.id)}> <FaTrash /></div>
+             
+            </div>
+           
+          </li>)
+       
+            }
           </ul>
         </div>
       </div>

@@ -4,11 +4,11 @@ import "./Trending.css";
 export default function Trending() {
   return (
     <div>
-      <div class="treding-container">
+      <div className="treding-container">
         <h1>Trending now</h1>
-        <div class="trending-content">
+        <div className="trending-content">
           <img
-            class="image1"
+            className="image1"
             src="https://heidicohen.com/wp-content/uploads/Top-5-Social-Networks-Global-Web-Index-2015-1.jpg"
           />
           <p>
@@ -20,10 +20,9 @@ export default function Trending() {
             adipisicing elit. Esse
           </p>
           <img
-            class="image2"
+            className="image2"
             src="https://th.bing.com/th/id/OIP.HM-B86Pqa-mjBZyfjZvAQQEHDt?w=200&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
             alt=""
-            srcset=""
           />
           <p>
             sunt iste nostrum quod omnis nulla aliquam repellendus dolores

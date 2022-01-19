@@ -167,3 +167,9 @@
   .card-user h3 {
     padding-top: 15px;
   }
+  .delete-icon{
+    display: flex;
+    justify-content: end;
+    padding-bottom: 20px;
+    padding-right: 20px;;
+  }

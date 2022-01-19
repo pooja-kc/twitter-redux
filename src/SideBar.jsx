@@ -6,23 +6,23 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 export default function SideBar() {
   return (
     <div>
-      <div class="wrapper">
-        <div class="sidebar">
+      <div className="wrapper">
+        <div className="sidebar">
           <ul>
             <Link to="/">
               <li>
-                <span class="icon">
+                <span className="icon">
                   <FaHome />
                 </span>
-                <span class="item">Home</span>
+                <span className="item">Home</span>
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/profile">
             <li>
-              <span class="icon">
+              <span className="icon">
                 <FaOdnoklassniki />
               </span>
-              <span class="item">Profile</span>
+              <span className="item">Profile</span>
             </li>
             </Link>
             

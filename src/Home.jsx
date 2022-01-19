@@ -11,11 +11,9 @@ export default function Home() {
         <SideBar />
       </div>
       <div className="content">
-        {" "}
         <Content />
       </div>
       <div className="trending">
-        {" "}
         <Trending />
       </div>
     </div>
