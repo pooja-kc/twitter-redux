@@ -1,7 +1,7 @@
 import React from "react";
-import SideBar from "./SideBar";
-import Content from "./Content";
-import Trending from "./Trending";
+import SideBar from "../SideBar/SideBar";
+import Content from "../Content/Content";
+import Trending from "../Trending/Trending";
 import "./Home.css";
 
 export default function Home() {

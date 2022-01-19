@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import SideBar from "./SideBar";
+import SideBar from "../SideBar/SideBar";
 
-import Trending from "./Trending";
+import Trending from "../Trending/Trending";
 
 import { connect } from "react-redux";
 

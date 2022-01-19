@@ -1,10 +1,10 @@
 import React from "react";
 import "./Login.css";
 import { useState } from "react";
-import store from "./Redux/store";
+import store from "../../Redux/store";
 import { useNavigate } from "react-router-dom";
 
-import { userSignedUp , addedCurrentUser} from "./Redux/actions";
+import { userSignedUp , addedCurrentUser} from "../../Redux/actions";
 
 
 

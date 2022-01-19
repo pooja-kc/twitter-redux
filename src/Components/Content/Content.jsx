@@ -1,10 +1,9 @@
 import React, {  useState } from "react";
 import "./Content.css";
 import { FaFileImage, FaMapMarkerAlt, FaSmile, FaTag } from "react-icons/fa";
-import store from "./Redux/store";
+import store from "../../Redux/store";
 import { FaTrash } from "react-icons/fa";
-
-import { addTweet, removeTweet } from "./Redux/actions";
+import {addTweet, removeTweet} from "../../Redux/actions"
 store.dispatch(addTweet({
   "userName": "Bibby Siderfin",
   "tweet": "Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
